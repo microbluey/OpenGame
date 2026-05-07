@@ -9,7 +9,7 @@ import * as os from 'node:os';
 import * as crypto from 'node:crypto';
 import * as fs from 'node:fs';
 
-export const QWEN_DIR = '.qwen';
+export const OPENGAME_DIR = '.opengame';
 export const GOOGLE_ACCOUNTS_FILENAME = 'google_accounts.json';
 export const OAUTH_FILE = 'oauth_creds.json';
 const TMP_DIR_NAME = 'tmp';
@@ -27,9 +27,9 @@ export class Storage {
   static getGlobalQwenDir(): string {
     const homeDir = os.homedir();
     if (!homeDir) {
-      return path.join(os.tmpdir(), '.qwen');
+      return path.join(os.tmpdir(), '.opengame');
     }
-    return path.join(homeDir, QWEN_DIR);
+    return path.join(homeDir, OPENGAME_DIR);
   }
 
   static getMcpOAuthTokensPath(): string {
@@ -69,7 +69,7 @@ export class Storage {
   }
 
   getQwenDir(): string {
-    return path.join(this.targetDir, QWEN_DIR);
+    return path.join(this.targetDir, OPENGAME_DIR);
   }
 
   getProjectDir(): string {

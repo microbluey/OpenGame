@@ -31,7 +31,7 @@ describe('LSTool', () => {
       tempSecondaryDir,
     ]);
 
-    const userSkillsBase = path.join(os.homedir(), '.qwen', 'skills');
+    const userSkillsBase = path.join(os.homedir(), '.opengame', 'skills');
 
     mockConfig = {
       getTargetDir: () => tempRootDir,

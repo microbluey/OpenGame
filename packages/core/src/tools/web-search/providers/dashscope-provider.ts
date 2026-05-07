@@ -59,7 +59,7 @@ interface DashScopeSearchResponse {
 }
 
 // File System Configuration
-const QWEN_DIR = '.qwen';
+const QWEN_DIR = '.opengame';
 const QWEN_CREDENTIAL_FILENAME = 'oauth_creds.json';
 
 /**

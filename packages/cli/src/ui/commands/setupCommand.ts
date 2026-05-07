@@ -108,7 +108,9 @@ export const setupCommand: SlashCommand = {
       sections.push('');
     }
 
-    sections.push('Persistent settings live in ~/.qwen/settings.json under');
+    sections.push(
+      'Persistent settings live in ~/.opengame/settings.json under',
+    );
     sections.push('  "openGame": { "providers": { "<modality>": { ... } } }');
     sections.push('');
     sections.push(

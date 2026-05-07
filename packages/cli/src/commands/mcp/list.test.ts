@@ -30,9 +30,9 @@ vi.mock('@opengame/opengame-core', () => ({
   Storage: vi.fn().mockImplementation((_cwd: string) => ({
     getGlobalSettingsPath: () => '/tmp/qwen/settings.json',
     getWorkspaceSettingsPath: () => '/tmp/qwen/workspace-settings.json',
-    getProjectTempDir: () => '/test/home/.qwen/tmp/mocked_hash',
+    getProjectTempDir: () => '/test/home/.opengame/tmp/mocked_hash',
   })),
-  QWEN_CONFIG_DIR: '.qwen',
+  QWEN_CONFIG_DIR: '.opengame',
   getErrorMessage: (e: unknown) => (e instanceof Error ? e.message : String(e)),
 }));
 vi.mock('@modelcontextprotocol/sdk/client/index.js');

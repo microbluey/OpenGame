@@ -970,7 +970,7 @@ export class GenerateAssetsTool extends BaseDeclarativeTool<
       ToolDisplayNames.GENERATE_ASSETS,
       `Generates game assets (images, animations, audio) using AI models.
        Provider (Tongyi / Doubao / any OpenAI-compatible API) and model names
-       are configured per-modality via env vars or ~/.qwen/settings.json
+       are configured per-modality via env vars or ~/.opengame/settings.json
        (see docs/users/configuration/api-keys.md). Features auto background
        removal, I2V animation generation, and ABC-based music generation.`,
       Kind.Fetch,

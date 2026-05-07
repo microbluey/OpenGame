@@ -25,7 +25,7 @@
  * Resolution order, highest priority first:
  *   1. Explicit per-modality environment variables
  *      (OPENGAME_<MOD>_PROVIDER / _API_KEY / _BASE_URL / _MODEL).
- *   2. The `openGame.providers.<mod>` block in ~/.qwen/settings.json
+ *   2. The `openGame.providers.<mod>` block in ~/.opengame/settings.json
  *      (passed in via the `fromConfig` argument).
  *   3. Legacy environment variables inherited from the upstream code
  *      (DASHSCOPE_API_KEY, IMAGE_MODEL_API_KEY, REASONING_MODEL_API_KEY,

@@ -195,7 +195,7 @@ const SETTINGS_SCHEMA = {
         description:
           'The language for the user interface. Use "auto" to detect from system settings. ' +
           'You can also use custom language codes (e.g., "es", "fr") by placing JS language files ' +
-          'in ~/.qwen/locales/ (e.g., ~/.qwen/locales/es.js).',
+          'in ~/.opengame/locales/ (e.g., ~/.opengame/locales/es.js).',
         showInDialog: true,
         options: [
           { value: 'auto', label: 'Auto (detect from system)' },
@@ -333,7 +333,7 @@ const SETTINGS_SCHEMA = {
         requiresRestart: false,
         default: false,
         description:
-          'Hide the context summary (QWEN.md, MCP servers) above the input.',
+          'Hide the context summary (OPENGAME.md, MCP servers) above the input.',
         showInDialog: true,
       },
       footer: {
@@ -767,11 +767,11 @@ const SETTINGS_SCHEMA = {
           },
           respectQwenIgnore: {
             type: 'boolean',
-            label: 'Respect .qwenignore',
+            label: 'Respect .opengameignore',
             category: 'Context',
             requiresRestart: true,
             default: true,
-            description: 'Respect .qwenignore files when searching',
+            description: 'Respect .opengameignore files when searching',
             showInDialog: true,
           },
           enableRecursiveFileSearch: {

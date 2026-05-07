@@ -48,8 +48,8 @@ packages/cli/src/generated/
 packages/core/src/generated/
 .integration-tests/
 
-# Qwen Code Configs
-.qwen/
+# OpenGame Configs
+.opengame/
 logs/
 # GHA credentials
 gha-creds-*.json
