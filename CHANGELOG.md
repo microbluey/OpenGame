@@ -2,6 +2,12 @@
 
 All notable changes to OpenGame will be documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- User config namespace now uses `.opengame/`, and the project memory file now uses `OPENGAME.md`.
+
 ## 0.6.0 — Initial OpenGame release
 
 OpenGame is a fork and rebrand of [qwen-code](https://github.com/leigest519/OpenGame), specialized for end-to-end web game creation from natural-language prompts.
@@ -15,7 +21,7 @@ Highlights of this initial release:
 - **Rebranded CLI**: the agent is invoked via the `opengame` command.
 - **Inherited from upstream**: rich tool suite (Skills, SubAgents, Plan Mode), interactive and headless run modes, OpenAI-compatible API, IDE integrations, and the TypeScript SDK from qwen-code / Gemini CLI.
 
-> Note: settings still live under `~/.qwen/settings.json` and `.qwen/settings.json` for backward compatibility with the upstream agent runtime. A migration to `~/.opengame/` is planned for a future release.
+> Note: settings live under `~/.opengame/settings.json` and `.opengame/settings.json`.
 
 ---
 

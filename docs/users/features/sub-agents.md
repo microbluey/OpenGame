@@ -69,8 +69,8 @@ Subagents are managed through the `/agents` slash command and its subcommands:
 
 Subagents are stored as Markdown files in two locations:
 
-- **Project-level**: `.qwen/agents/` (takes precedence)
-- **User-level**: `~/.qwen/agents/` (fallback)
+- **Project-level**: `.opengame/agents/` (takes precedence)
+- **User-level**: `~/.opengame/agents/` (fallback)
 
 This allows you to have both project-specific agents and personal agents that work across all projects.
 

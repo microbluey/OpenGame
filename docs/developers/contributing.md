@@ -257,7 +257,7 @@ To hit a breakpoint inside the sandbox container run:
 DEBUG=1 opengame
 ```
 
-**Note:** If you have `DEBUG=true` in a project's `.env` file, it won't affect OpenGame due to automatic exclusion. Use `.qwen/.env` files for OpenGame-specific debug settings (the `.qwen` directory name is inherited from the upstream agent runtime for backward compatibility).
+**Note:** If you have `DEBUG=true` in a project's `.env` file, it won't affect OpenGame due to automatic exclusion. Use `.opengame/.env` files for OpenGame-specific debug settings.
 
 ### React DevTools
 
