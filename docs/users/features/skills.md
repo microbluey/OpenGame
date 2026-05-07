@@ -40,10 +40,10 @@ Skills are stored as directories containing a `SKILL.md` file.
 
 ### Personal Skills
 
-Personal Skills are available across all your projects. Store them in `~/.qwen/skills/`:
+Personal Skills are available across all your projects. Store them in `~/.opengame/skills/`:
 
 ```bash
-mkdir -p ~/.qwen/skills/my-skill-name
+mkdir -p ~/.opengame/skills/my-skill-name
 ```
 
 Use personal Skills for:
@@ -54,10 +54,10 @@ Use personal Skills for:
 
 ### Project Skills
 
-Project Skills are shared with your team. Store them in `.qwen/skills/` within your project:
+Project Skills are shared with your team. Store them in `.opengame/skills/` within your project:
 
 ```bash
-mkdir -p .qwen/skills/my-skill-name
+mkdir -p .opengame/skills/my-skill-name
 ```
 
 Use project Skills for:
@@ -130,8 +130,8 @@ python scripts/helper.py input.txt
 
 When `--experimental-skills` is enabled, OpenGame discovers Skills from:
 
-- Personal Skills: `~/.qwen/skills/`
-- Project Skills: `.qwen/skills/`
+- Personal Skills: `~/.opengame/skills/`
+- Project Skills: `.opengame/skills/`
 
 To view available Skills, ask OpenGame directly:
 
@@ -143,13 +143,13 @@ Or inspect the filesystem:
 
 ```bash
 # List personal Skills
-ls ~/.qwen/skills/
+ls ~/.opengame/skills/
 
 # List project Skills (if in a project directory)
-ls .qwen/skills/
+ls .opengame/skills/
 
 # View a specific Skill’s content
-cat ~/.qwen/skills/my-skill/SKILL.md
+cat ~/.opengame/skills/my-skill/SKILL.md
 ```
 
 ## Test a Skill
@@ -184,15 +184,15 @@ description: Extract text and tables from PDF files, fill forms, merge documents
 
 ### Verify file path
 
-- Personal Skills: `~/.qwen/skills/<skill-name>/SKILL.md`
-- Project Skills: `.qwen/skills/<skill-name>/SKILL.md`
+- Personal Skills: `~/.opengame/skills/<skill-name>/SKILL.md`
+- Project Skills: `.opengame/skills/<skill-name>/SKILL.md`
 
 ```bash
 # Personal
-ls ~/.qwen/skills/my-skill/SKILL.md
+ls ~/.opengame/skills/my-skill/SKILL.md
 
 # Project
-ls .qwen/skills/my-skill/SKILL.md
+ls .opengame/skills/my-skill/SKILL.md
 ```
 
 ### Check YAML syntax
@@ -221,12 +221,12 @@ opengame --experimental-skills --debug
 
 You can share Skills through project repositories:
 
-1. Add the Skill under `.qwen/skills/`
+1. Add the Skill under `.opengame/skills/`
 2. Commit and push
 3. Teammates pull the changes and run with `--experimental-skills`
 
 ```bash
-git add .qwen/skills/
+git add .opengame/skills/
 git commit -m "Add team Skill for PDF processing"
 git push
 ```
@@ -237,10 +237,10 @@ Edit `SKILL.md` directly:
 
 ```bash
 # Personal Skill
-code ~/.qwen/skills/my-skill/SKILL.md
+code ~/.opengame/skills/my-skill/SKILL.md
 
 # Project Skill
-code .qwen/skills/my-skill/SKILL.md
+code .opengame/skills/my-skill/SKILL.md
 ```
 
 Changes take effect the next time you start OpenGame. If OpenGame is already running, restart it to load the updates.
@@ -251,10 +251,10 @@ Delete the Skill directory:
 
 ```bash
 # Personal
-rm -rf ~/.qwen/skills/my-skill
+rm -rf ~/.opengame/skills/my-skill
 
 # Project
-rm -rf .qwen/skills/my-skill
+rm -rf .opengame/skills/my-skill
 git commit -m "Remove unused Skill"
 ```
 

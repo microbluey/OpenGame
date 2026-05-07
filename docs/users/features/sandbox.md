@@ -123,7 +123,7 @@ Built-in profiles (set via `SEATBELT_PROFILE` env var):
 
 To use a custom Seatbelt profile:
 
-1. Create a file named `.qwen/sandbox-macos-<profile_name>.sb` in your project.
+1. Create a file named `.opengame/sandbox-macos-<profile_name>.sb` in your project.
 2. Set `SEATBELT_PROFILE=<profile_name>`.
 
 ### Custom Sandbox Flags
@@ -168,7 +168,7 @@ export SANDBOX_SET_UID_GID=false  # Disable UID/GID mapping
 
 If you need extra tools inside the container (e.g., `git`, `python`, `rg`), create a custom Dockerfile:
 
-- Path: `.qwen/sandbox.Dockerfile`
+- Path: `.opengame/sandbox.Dockerfile`
 - Then run with: `BUILD_SANDBOX=1 opengame -s ...`
 
 This builds a project-specific image based on the default sandbox image.
@@ -185,7 +185,7 @@ This builds a project-specific image based on the default sandbox image.
 
 **Missing commands**
 
-- Container sandbox: add them via `.qwen/sandbox.Dockerfile` or `.qwen/sandbox.bashrc`.
+- Container sandbox: add them via `.opengame/sandbox.Dockerfile` or `.opengame/sandbox.bashrc`.
 - Seatbelt: your host binaries are used, but the sandbox may restrict access to some paths.
 
 **Network issues**
@@ -199,7 +199,7 @@ This builds a project-specific image based on the default sandbox image.
 DEBUG=1 opengame -s -p "debug command"
 ```
 
-**Note:** If you have `DEBUG=true` in a project's `.env` file, it won't affect the CLI due to automatic exclusion. Use `.qwen/.env` files for OpenGame-specific debug settings.
+**Note:** If you have `DEBUG=true` in a project's `.env` file, it won't affect the CLI due to automatic exclusion. Use `.opengame/.env` files for OpenGame-specific debug settings.
 
 ### Inspect sandbox
 

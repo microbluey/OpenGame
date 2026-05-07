@@ -106,7 +106,7 @@ A copy-paste template for all variables lives at the repository root in
 
 ---
 
-## Configuring via `~/.qwen/settings.json`
+## Configuring via `~/.opengame/settings.json`
 
 The same fields can be persisted to your settings file. Environment variables
 take precedence, so settings.json is the right place for "default" choices

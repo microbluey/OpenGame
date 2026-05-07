@@ -57,27 +57,27 @@ export OPENAI_BASE_URL="https://api.openai.com/v1"  # optional
 export OPENAI_MODEL="gpt-4o"                        # optional
 ```
 
-#### Persisting env vars with `.env` / `.qwen/.env`
+#### Persisting env vars with `.env` / `.opengame/.env`
 
 OpenGame will auto-load environment variables from the **first** `.env` file it finds (variables are **not merged** across multiple files).
 
 Search order:
 
 1. From the **current directory**, walking upward toward `/`:
-   1. `.qwen/.env`
+   1. `.opengame/.env`
    2. `.env`
 2. If nothing is found, it falls back to your **home directory**:
-   - `~/.qwen/.env`
+   - `~/.opengame/.env`
    - `~/.env`
 
-`.qwen/.env` is recommended to keep OpenGame variables isolated from other tools. Some variables (like `DEBUG` and `DEBUG_MODE`) are excluded from project `.env` files to avoid interfering with qwen-code behavior.
+`.opengame/.env` is recommended to keep OpenGame variables isolated from other tools. Some variables (like `DEBUG` and `DEBUG_MODE`) are excluded from project `.env` files to avoid interfering with qwen-code behavior.
 
 Examples:
 
 ```bash
 # Project-specific settings (recommended)
-mkdir -p .qwen
-cat >> .qwen/.env <<'EOF'
+mkdir -p .opengame
+cat >> .opengame/.env <<'EOF'
 OPENAI_API_KEY="your-api-key"
 OPENAI_BASE_URL="https://api-inference.modelscope.cn/v1"
 OPENAI_MODEL="Qwen/Qwen3-Coder-480B-A35B-Instruct"
@@ -86,8 +86,8 @@ EOF
 
 ```bash
 # User-wide settings (available everywhere)
-mkdir -p ~/.qwen
-cat >> ~/.qwen/.env <<'EOF'
+mkdir -p ~/.opengame
+cat >> ~/.opengame/.env <<'EOF'
 OPENAI_API_KEY="your-api-key"
 OPENAI_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
 OPENAI_MODEL="qwen3-coder-plus"
@@ -115,5 +115,5 @@ If none of these are set in a non-interactive session, OpenGame will exit with a
 ## Security notes
 
 - Don’t commit API keys to version control.
-- Prefer `.qwen/.env` for project-local secrets (and keep it out of git).
+- Prefer `.opengame/.env` for project-local secrets (and keep it out of git).
 - Treat your terminal output as sensitive if it prints credentials for verification.
