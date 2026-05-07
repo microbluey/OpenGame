@@ -36,8 +36,9 @@ const mockQwenOAuth2Events = vi.mocked(qwenOAuth2Events);
 
 describe('useQwenAuth', () => {
   const mockDeviceAuth: DeviceAuthorizationData = {
-    verification_uri: 'https://oauth.qwen.com/device',
-    verification_uri_complete: 'https://oauth.qwen.com/device?user_code=ABC123',
+    verification_uri: 'https://oauth.opengame.com/device',
+    verification_uri_complete:
+      'https://oauth.opengame.com/device?user_code=ABC123',
     user_code: 'ABC123',
     expires_in: 1800,
     device_code: 'device_code_123',

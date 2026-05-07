@@ -17,7 +17,7 @@ import type {
 import { SkillError, SkillErrorCode } from './types.js';
 import type { Config } from '../config/config.js';
 
-const QWEN_CONFIG_DIR = '.qwen';
+const QWEN_CONFIG_DIR = '.opengame';
 const SKILLS_CONFIG_DIR = 'skills';
 const SKILL_MANIFEST_FILE = 'SKILL.md';
 

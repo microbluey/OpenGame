@@ -398,7 +398,7 @@ export class GameTypeClassifierTool extends BaseDeclarativeTool<
 
   /**
    * Resolve the classifier's reasoning-model config from
-   * env / ~/.qwen settings.  Throws `MissingProviderConfigError` (with an
+   * env / ~/.opengame settings.  Throws `MissingProviderConfigError` (with an
    * actionable message) when nothing is configured. Called lazily by the
    * invocation so tool registration doesn't crash on a fresh install.
    */

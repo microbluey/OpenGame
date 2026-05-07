@@ -31,7 +31,7 @@ import type { Config } from '../config/config.js';
 import { BuiltinAgentRegistry } from './builtin-agents.js';
 import { ToolDisplayNamesMigration } from '../tools/tool-names.js';
 
-const QWEN_CONFIG_DIR = '.qwen';
+const QWEN_CONFIG_DIR = '.opengame';
 const AGENT_CONFIG_DIR = 'agents';
 
 /**

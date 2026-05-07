@@ -16,7 +16,7 @@ import {
   loadExtension,
 } from '../extension.js';
 import { checkForAllExtensionUpdates, updateExtension } from './update.js';
-import { QWEN_DIR } from '@opengame/opengame-core';
+import { OPENGAME_DIR } from '@opengame/opengame-core';
 import { isWorkspaceTrusted } from '../trustedFolders.js';
 import { ExtensionUpdateState } from '../../ui/state/extensions.js';
 import { createExtension } from '../../test-utils/createExtension.js';
@@ -96,7 +96,7 @@ describe('update tests', () => {
       path.join(tempHomeDir, 'qwen-code-test-workspace-'),
     );
     vi.mocked(os.homedir).mockReturnValue(tempHomeDir);
-    userExtensionsDir = path.join(tempHomeDir, QWEN_DIR, 'extensions');
+    userExtensionsDir = path.join(tempHomeDir, OPENGAME_DIR, 'extensions');
     // Clean up before each test
     fs.rmSync(userExtensionsDir, { recursive: true, force: true });
     fs.mkdirSync(userExtensionsDir, { recursive: true });

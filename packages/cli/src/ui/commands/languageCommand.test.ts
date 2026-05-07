@@ -61,10 +61,10 @@ vi.mock('@opengame/opengame-core', async (importOriginal) => {
   return {
     ...actual,
     Storage: {
-      getGlobalQwenDir: vi.fn().mockReturnValue('/mock/.qwen'),
+      getGlobalQwenDir: vi.fn().mockReturnValue('/mock/.opengame'),
       getGlobalSettingsPath: vi
         .fn()
-        .mockReturnValue('/mock/.qwen/settings.json'),
+        .mockReturnValue('/mock/.opengame/settings.json'),
     },
   };
 });

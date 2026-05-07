@@ -7,7 +7,7 @@ const INCLUDED_EXTENSIONS = new Set(['.ts', '.json', '.js', '.md']);
 const EXCLUDED_DIRS = new Set([
   'node_modules',
   '.git',
-  '.qwen',
+  '.opengame',
   'dist',
   'coverage',
   '.cursor',

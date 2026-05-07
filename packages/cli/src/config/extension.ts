@@ -10,7 +10,7 @@ import type {
   ExtensionInstallMetadata,
 } from '@opengame/opengame-core';
 import {
-  QWEN_DIR,
+  OPENGAME_DIR,
   Storage,
   Config,
   ExtensionInstallEvent,
@@ -39,7 +39,7 @@ import { ExtensionEnablementManager } from './extensions/extensionEnablement.js'
 import chalk from 'chalk';
 import type { ConfirmationRequest } from '../ui/types.js';
 
-export const EXTENSIONS_DIRECTORY_NAME = path.join(QWEN_DIR, 'extensions');
+export const EXTENSIONS_DIRECTORY_NAME = path.join(OPENGAME_DIR, 'extensions');
 
 export const EXTENSIONS_CONFIG_FILENAME = 'qwen-extension.json';
 export const INSTALL_METADATA_FILENAME = '.qwen-extension-install.json';
@@ -301,7 +301,7 @@ export function loadInstallMetadata(
 
 function getContextFileNames(config: ExtensionConfig): string[] {
   if (!config.contextFileName) {
-    return ['QWEN.md'];
+    return ['OPENGAME.md'];
   } else if (!Array.isArray(config.contextFileName)) {
     return [config.contextFileName];
   }
@@ -581,7 +581,7 @@ function extensionConsentString(extensionConfig: ExtensionConfig): string {
   }
   if (extensionConfig.contextFileName) {
     output.push(
-      `This extension will append info to your QWEN.md context using ${extensionConfig.contextFileName}`,
+      `This extension will append info to your OPENGAME.md context using ${extensionConfig.contextFileName}`,
     );
   }
   if (extensionConfig.excludeTools) {

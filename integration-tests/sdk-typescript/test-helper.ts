@@ -34,11 +34,11 @@ import {
 
 export interface SDKTestHelperOptions {
   /**
-   * Optional settings for .qwen/settings.json
+   * Optional settings for .opengame/settings.json
    */
   settings?: Record<string, unknown>;
   /**
-   * Whether to create .qwen/settings.json
+   * Whether to create .opengame/settings.json
    */
   createQwenConfig?: boolean;
 }
@@ -72,9 +72,9 @@ export class SDKTestHelper {
 
     await mkdir(this.testDir, { recursive: true });
 
-    // Optionally create .qwen/settings.json for CLI configuration
+    // Optionally create .opengame/settings.json for CLI configuration
     if (options.createQwenConfig !== false) {
-      const qwenDir = join(this.testDir, '.qwen');
+      const qwenDir = join(this.testDir, '.opengame');
       await mkdir(qwenDir, { recursive: true });
 
       const optionsSettings = options.settings ?? {};

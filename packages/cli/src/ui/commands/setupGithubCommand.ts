@@ -52,7 +52,7 @@ function getOpenUrlsCommands(readmeUrl: string): string[] {
 
 // Add OpenGame specific entries to .gitignore file
 export async function updateGitignore(gitRepoRoot: string): Promise<void> {
-  const gitignoreEntries = ['.qwen/', 'gha-creds-*.json'];
+  const gitignoreEntries = ['.opengame/', 'gha-creds-*.json'];
 
   const gitignorePath = path.join(gitRepoRoot, '.gitignore');
   try {

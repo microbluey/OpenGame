@@ -85,7 +85,7 @@ describe('SkillManager', () => {
     name: 'test-skill',
     description: 'A test skill',
     level: 'project',
-    filePath: '/test/project/.qwen/skills/test-skill/SKILL.md',
+    filePath: '/test/project/.opengame/skills/test-skill/SKILL.md',
     body: 'You are a helpful assistant with this skill.',
   };
 
@@ -134,8 +134,8 @@ You are a helpful assistant with this skill.
     });
 
     it('should determine level from file path', () => {
-      const projectPath = '/test/project/.qwen/skills/test-skill/SKILL.md';
-      const userPath = '/home/user/.qwen/skills/test-skill/SKILL.md';
+      const projectPath = '/test/project/.opengame/skills/test-skill/SKILL.md';
+      const userPath = '/home/user/.opengame/skills/test-skill/SKILL.md';
 
       const projectConfig = manager.parseSkillContent(
         validMarkdown,
@@ -404,13 +404,13 @@ Skill 3 content`);
     it('should return project-level base dir', () => {
       const baseDir = manager.getSkillsBaseDir('project');
 
-      expect(baseDir).toBe(path.join('/test/project', '.qwen', 'skills'));
+      expect(baseDir).toBe(path.join('/test/project', '.opengame', 'skills'));
     });
 
     it('should return user-level base dir', () => {
       const baseDir = manager.getSkillsBaseDir('user');
 
-      expect(baseDir).toBe(path.join('/home/user', '.qwen', 'skills'));
+      expect(baseDir).toBe(path.join('/home/user', '.opengame', 'skills'));
     });
   });
 

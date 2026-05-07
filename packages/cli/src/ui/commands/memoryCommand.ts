@@ -7,7 +7,7 @@
 import {
   getErrorMessage,
   loadServerHierarchicalMemory,
-  QWEN_DIR,
+  OPENGAME_DIR,
 } from '@opengame/opengame-core';
 import path from 'node:path';
 import os from 'os';
@@ -56,7 +56,7 @@ export const memoryCommand: SlashCommand = {
           kind: CommandKind.BUILT_IN,
           action: async (context) => {
             try {
-              const projectMemoryPath = path.join(process.cwd(), 'QWEN.md');
+              const projectMemoryPath = path.join(process.cwd(), 'OPENGAME.md');
               const memoryContent = await fs.readFile(
                 projectMemoryPath,
                 'utf-8',
@@ -103,8 +103,8 @@ export const memoryCommand: SlashCommand = {
             try {
               const globalMemoryPath = path.join(
                 os.homedir(),
-                QWEN_DIR,
-                'QWEN.md',
+                OPENGAME_DIR,
+                'OPENGAME.md',
               );
               const globalMemoryContent = await fs.readFile(
                 globalMemoryPath,

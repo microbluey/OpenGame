@@ -47,7 +47,7 @@ async function prepareTestEnvironment(outputDir: string): Promise<void> {
   await fs.mkdir(outputDir, { recursive: true });
 
   const customPromptPath = path.join(PROJECT_ROOT, 'prompts', 'custom.md');
-  const outputQwenDir = path.join(outputDir, '.qwen');
+  const outputQwenDir = path.join(outputDir, '.opengame');
   const outputSystemMd = path.join(outputQwenDir, 'system.md');
 
   await fs.mkdir(outputQwenDir, { recursive: true });
