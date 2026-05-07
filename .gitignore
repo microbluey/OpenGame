@@ -83,3 +83,6 @@ docs-site/content
 
 # guidance files
 guidance.md
+
+# Local-only planning docs (not for the repo)
+plans/
