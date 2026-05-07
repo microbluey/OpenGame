@@ -48,6 +48,25 @@ packages/cli/src/generated/
 packages/core/src/generated/
 .integration-tests/
 
+# TypeScript side-by-side build output
+*.js.map
+packages/*/src/**/*.js
+packages/*/src/**/*.d.ts
+agent-test/**/*.js
+agent-test/**/*.d.ts
+integration-tests/**/*.js
+integration-tests/**/*.d.ts
+docs/**/*.js
+docs/**/*.d.ts
+scripts/**/*.js
+scripts/**/*.d.ts
+vitest.config.js
+/*.d.ts
+
+# Real JavaScript sources
+!packages/cli/src/i18n/locales/*.js
+!scripts/tests/get-release-version.test.js
+
 # OpenGame Configs
 .opengame/
 logs/
